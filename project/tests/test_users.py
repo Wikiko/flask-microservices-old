@@ -4,6 +4,7 @@ import json
 
 from project.tests.base import BaseTestCase
 
+
 class TestUserService(BaseTestCase):
     """Tests for the Users Service"""
 
