@@ -11,9 +11,14 @@ users_blueprint = Blueprint('users', __name__)
 
 @users_blueprint.route('/ping', methods=['GET'])
 def ping_pong():
+    count = 0
+    for i in range(100000):
+        count += 1
+
     return jsonify({
         'status': 'success',
-        'message': 'pong!'
+        'message': 'pong!',
+        'count': count
     })
 
 
