@@ -26,8 +26,6 @@ services:
     links:
       - users-db
     command: gunicorn -b 0.0.0.0:5000 manage:app
-    expose:
-      - '5000'
 
   nginx:
     container_name: nginx
