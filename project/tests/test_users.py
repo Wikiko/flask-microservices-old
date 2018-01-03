@@ -122,9 +122,11 @@ class TestUserService(BaseTestCase):
             self.assertTrue('created_at' in data['data']['users'][0])
             self.assertTrue('created_at' in data['data']['users'][1])
             self.assertIn('michael', data['data']['users'][0]['username'])
-            self.assertIn('michael@realpython.com', data['data']['users'][0]['email'])
+            self.assertIn('michael@realpython.com',
+                          data['data']['users'][0]['email'])
             self.assertIn('fletcher', data['data']['users'][1]['username'])
-            self.assertIn('fletcher@realpython.com', data['data']['users'][1]['email'])
+            self.assertIn('fletcher@realpython.com',
+                          data['data']['users'][1]['email'])
             self.assertIn('success', data['status'])
 
     def test_main_no_users(self):
